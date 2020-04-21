@@ -14,8 +14,9 @@ class Person
 		void Talk(string stuffToSay);
 		void Walk(int numberOfSteps);
 
-		//Contstructor
-		Person(string name, string age, int health);
+		//Getters and Setters - just methods to get and set private data
+		string GetName();
+		void SetName(string name);
 
 		//Public Properties
 		string HairColor;

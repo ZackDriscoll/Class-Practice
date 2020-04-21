@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Person.h"
+#include "Student.h"
+#include "Professor.h"
 
 using namespace std;
 
@@ -11,19 +12,23 @@ int main()
 	//Now we can make as many objects from our class as we like!
 	//We only use classes to create objects
 	//Syntax is: Class Name then Object Name to make an object, not use.
-	Person professor("Professor Hinton", "20 years old", 100);
-	Person student1("Sam", "20 years old", 100);
-	Person student2("Christina", "25 years old", 100);
-	Person student3("Marc", "30 years old", 100);
-	Person student4("Drayce", "22 years old", 100);
+	
+	//Students
+	Student student1("Sam", "21", 100);
+	cout << student1.GetName() << " says: \n";
+	student1.Talk("Hello, I am Sam. I plan on making a great game!\n");
+	Student student2("Brandon", "23", 95);
+	cout << student2.GetName() << " says: \n";
+	student2.Talk("Hello, I am Brandon. I don't feel 100%.\n");
+	Student student3("Jonah", "24", 110);
+	cout << student3.GetName() << " says: \n";
+	student3.Talk("Hello, I feel powerful!!\n");
 
-	//Now let's use our objects, note: we do not use classes!
-	professor.HairColor = "Grey";
-	professor.Talk("Welcome to the class!");
-	student1.Talk("Is ther a reason to use classes than just going with headers & source files?");
-	professor.Talk("Yes, to save code and becuase we think in objects.");
-	student2.Walk(20);
-	student2.Talk("Sorry I'm late, there was a dragon which attacked me on the way to class today, again!");
+	//Professors
+	Professor professor1;
+	professor1.SetName("Professor Hinton");
+	cout << professor1.GetName() << " says: \n";
+	professor1.Talk("Hello, I am a professor and I will enjoy playing the game you created!\n");
 
 	return 0;
 }

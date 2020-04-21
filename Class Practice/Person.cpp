@@ -4,17 +4,19 @@
 
 using namespace std;
 
-Person::Person(string name, string age, int health)
+void Person::SetName(string name) 
 {
-	cout << "\nI am born!\n";
 	Name = name;
-	Age = age;
-	Health = health;
+}
+
+string Person::GetName()
+{
+	return Name;
 }
 
 void Person::Talk(string stuffToSay)
 {
-	cout << endl << Name << " says " << stuffToSay << endl;
+	cout << endl << stuffToSay << endl;
 }
 
 void Person::Walk(int numberOfSteps)
